@@ -1,0 +1,43 @@
+{
+"name": "Student Schedule",
+"version": "1.0",
+"description": "Have access to your daily school schedule anywhere anytime",
+"permissions": ["activeTab", "declarativeContent", "storage","identity","identity.email","<all_urls>","http://localhost:8080/"],
+"content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/"],
+      "js": ["Permission_Files/jquery-3.5.1.min.js","Permission_Files/d3.min.js","Permission_Files/bootstrap.min.js","Permission_Files/popper.min.js","popup.js"]
+    }
+  ],
+"background": {
+"scripts": ["background.js"],
+"persistent": false
+},
+"browser_action": {
+  "default_popup": "popup.html",
+  "default_title": "Todays Schedule",
+  "defult_icon": {
+    "16": "images/Calander_16.png",
+    "32": "images/Calander_32.png",
+    "48": "images/Calander_48.png",
+    "128": "images/Calander_128.png"
+  }
+},
+"icons": {
+  "16": "images/Calander_16.png",
+  "32": "images/Calander_32.png",
+  "48": "images/Calander_48.png",
+  "128": "images/Calander_128.png"
+},
+"oauth2": {
+    "client_id": "152252654122-l874vghkcg4s4i4ufk8tlucjpdvpp1g8.apps.googleusercontent.com",
+    "scopes":[
+      "https://www.googleapis.com/auth/calendar.readonly",
+      "https://www.googleapis.com/auth/calendar",
+      "https://www.googleapis.com/auth/userinfo.email",
+      "profile email"
+    ]
+  },
+"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwv/E8B1MxS2uxYF45HzK9alSZ27LbdcJF9GuMzsFTaMaUVcDdcu7b/90ztOAoTJgzMsWPVj/X1ZSFj8mvfrv3SoS1mLIgC9jDbnkhTX58osqQW8zwfwQGB3ozzg1U/4SrCio5Ef6FykSsRrHya+8T9NwvjfZFIvOvsUjQkSkNBSSzqgRfsCczx9FfBhxlvF9aefPgY9z8wtOXvC03MYNMCR4oybnF1RejnWLRkYmeXZzNr9ODg5Ywp5b3UnB7NVr01uB02c1Dbdi2eo8U2H+1FQXxP5/mcKoueGgaeGDz6VjkwbBB4BO/lzM64Tn0imIRvAFs6uRAgqjNJvaQkmelwIDAQAB",
+  "manifest_version": 2
+}

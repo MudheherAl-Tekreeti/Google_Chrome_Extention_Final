@@ -1,0 +1,31 @@
+<DOCTYPE html>
+  <html lang="en">
+    <head>
+<!--Meta tags for how to popup window is displayed-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--This is the CSS style sheet used-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<!--This is the Tittle-->
+      <title>Student Schedule</title>
+      <script src="Permission_Files/d3.min.js"></script>
+      <script src="Permission_Files/jquery-3.5.1.min.js"></script>
+  </head>
+      <body style="width:300px;height:200px;">
+        <script src="popup.js"></script>
+<!--This is the Scorpion Images -->
+      <img src="Scorpion1.jpg" class = "float-left" alt = "Scorpion" width="50" height="43">
+   <img src="Scorpion2.jpg" class = "float-right" alt="Scorpion" width="50" height="43">
+<!--This is the student name's schedule-->
+<h5 small class = "text-center">School Schedule</h5 small>
+<!--This is the current local time and date-->
+  <div class = "text-center" id="date">d</div><div class = "text-center" id="time">t</div>
+<!--This is the grid view of the school schedule-->
+  <div class= "container mb-2 bg-secondary text-white">
+    <div class="row row-cols-2" id="gridContainer"></div>
+  </div>
+<!--This is the Bootstrap Permissions-->
+<script src="Permission_Files/bootstrap.min.js" ></script>
+<script src="Permission_Files/popper.min.js"></script>
+      </body>
+    </html>
